@@ -2,32 +2,43 @@
 <html>
 
 <style>
-.container {
+
+.wrapper {
     text-align: center;
 }
-    html, body, {
+
+
+html, body, {
     position:fixed;
     top:0;
     bottom:0;
     left:0;
     right:0;
 }
+
+.videosize {
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    width:100%; 
+    height:100vh;
+}
+
 </style>
 
-<body >
+<body>
 
-<div class="container">
-<button  style="height:300px;width:300px" id="dugme" style="background:black;color:red" onclick="love()" height="400" width="400">Stisni me</button>
+<div class="wrapper">
+  <button id="dugme" style="background:black;color:red;height:300px;width:300px;" onclick="love()">Stisni me</button>
 </div>
 
-<video id="video" autobuffer style="display:none;height:80%;width:100%">
+<video class="videosize" id="video" autobuffer style="display:none;">
   <source src="love.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-<div class="container">
-<p style="color:red;display:none" id="message"><font size="10"> Architects inspire, so you inspire me</font></p>
-</div>
+<p class="wrapper" style="color:red;display:none;" id="message"><font size="10"> Architects inspire, so you inspire me</font></p>
 
 <script>
 function love() {
