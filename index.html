@@ -6,6 +6,11 @@
 .wrapper {
     text-align: center;
 }
+    
+.button {
+    position: absolute;
+    top: 50%;
+}
 
 
 html, body, {
@@ -30,7 +35,7 @@ html, body, {
 <body>
 
 <div class="wrapper">
-  <button id="dugme" style="background:black;color:red;height:300px;width:300px;" onclick="love()">Stisni me</button>
+  <button class="button" id="dugme" style="background:black;color:red;height:300px;width:300px;" onclick="love()">Stisni me</button>
 </div>
 
 <video class="videosize" id="video" autobuffer style="display:none;">
@@ -38,8 +43,10 @@ html, body, {
   Your browser does not support the video tag.
 </video>
 
-<p class="wrapper" style="color:red;display:none;" id="message"><font size="10"> Architects inspire, so you inspire me</font></p>
-
+<div class="wrapper">
+<p class="button" style="color:red;display:none;" id="message"><font size="10"> Architects inspire, so you inspire me</font></p>
+</div>
+    
 <script>
 function love() {
   var x = document.getElementById("video");
