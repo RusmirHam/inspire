@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+.container {
+    text-align: center;
+}
+</style>
+
 <body>
 
-<button style="background:black;color:red" onclick="love()" >Stisni me</button>
+<div class="container">
+<button  style="height:300px;width:300px" id="dugme" style="background:black;color:red" onclick="love()" height="400" width="400">Stisni me</button>
+</div>
 
-<video width="50%" height="50%" id="dugme" controls style="display:none">
-  <source src="love.mp4" type="video/mp4">
+<video id="video" autobuffer style="display:none;height:300px;width:300px">
+  <source src="movie.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -14,13 +23,15 @@
 
 <script>
 function love() {
-  var x = document.getElementById("dugme");
+  var x = document.getElementById("video");
+  var z = document.getElementById("dugme");
   var y = document.getElementById("message");
   if (x.style.display === "none") {
     x.style.display = "block";
     x.autoplay = true;
     x.load();
     y.style.display = "block";
+    z.style.display = "none";
   } else {
     x.style.display = "none";
     y.style.display = "none";
