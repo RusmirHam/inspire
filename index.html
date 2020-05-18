@@ -3,71 +3,19 @@
 
 <style>
 
-.wrapper {
-    text-align: center;
-}
-    
-.button {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%; 
-    height:100vh;
-}
-
-
-html, body, {
-    background:black;
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-}
-
-.videosize {
-    position:absolute;
-    z-index:-1;
-    top:0;
-    left:0;
-    width:100%; 
-    height:100vh;
-}
+#bg { 
+position: fixed; 
+top: 0; 
+left: 0; 
+min-width: 100%; 
+min-height: 100%; }
 
 </style>
 
 <body>
 
-<div class="wrapper">
-  <button class="button" id="dugme" style="font-size : 50px;background:black;color:red;" onclick="love()">Stisni me</button>
-</div>
-
-<video class="videosize" id="video" autobuffer style="display:none;">
-  <source src="love.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<div class="wrapper">
-<p class="button" style="color:red;display:none;" id="message"><font size="10"> Architects inspire, so you inspire me</font></p>
-</div>
-    
-<script>
-function love() {
-  var x = document.getElementById("video");
-  var z = document.getElementById("dugme");
-  var y = document.getElementById("message");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    x.autoplay = true;
-    x.load();
-    y.style.display = "block";
-    z.style.display = "none";
-  } else {
-    x.style.display = "none";
-    y.style.display = "none";
-  }
-}
-</script>
+<img src="bg.jpg" id="bg" alt="">
 
 </body>
+
 </html>
